@@ -9,7 +9,7 @@ import os
 DB_CONFIG = {
     "host": "localhost",
     "user": "root",
-    "password": "aditya",
+    "password": "@Rajarshi123",
     "database": "books_db"
 }
 
