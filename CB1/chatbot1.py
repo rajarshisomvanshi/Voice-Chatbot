@@ -256,7 +256,7 @@ class ChatbotApp:
     def insert_order(self, mobile, title, author, quantity, total_price):
         conn = mysql.connector.connect(**DB_CONFIG)
         cursor = conn.cursor()
-        cursor.execute("INSERT INTO orders (mobile_number,book_title, author, quantity, total_price) VALUES (%s, %s, %s, %s, %s)",
+        cursor.execute("INSERT INTO orders (user_mobile,book_title, author, quantity, total_price) VALUES (%s, %s, %s, %s, %s)",
                        (mobile, title, author, quantity, total_price))
         cursor.execute("Update stock set quantity = quantity - %s where title = %s",
                        (quantity, title))
