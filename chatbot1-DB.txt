@@ -1,0 +1,32 @@
+ id | title                                 | author                             | publisher                 | language | quantity | edition                  | price  | genre         | bestseller | year_of_publication | rating | age_group |
++----+---------------------------------------+------------------------------------+---------------------------+----------+----------+--------------------------+--------+---------------+------------+---------------------+--------+-----------+
+|  1 | The Alchemist                         | Paulo Coelho                       | HarperOne                 | English  |       50 | 25th Anniversary Edition | 399.00 | Fiction       |          1 |                1988 |   4.70 | 15+       |
+|  2 | To Kill a Mockingbird                 | Harper Lee                         | J.B. Lippincott & Co.     | English  |       40 | 1st Edition              | 499.00 | Fiction       |          1 |                1960 |   4.80 | 13+       |
+|  3 | 1984                                  | George Orwell                      | Secker & Warburg          | English  |       35 | Reprint                  | 349.00 | Dystopian     |          1 |                1949 |   4.60 | 16+       |
+|  4 | Pride and Prejudice                   | Jane Austen                        | Penguin Classics          | English  |       25 | Revised Edition          | 299.00 | Romance       |          1 |                1813 |   4.50 | 13+       |
+|  5 | The Great Gatsby                      | F. Scott Fitzgerald                | Scribner                  | English  |       30 | Classic Edition          | 379.00 | Fiction       |          1 |                1925 |   4.40 | 15+       |
+|  6 | Harry Potter and the Sorcerer's Stone | J.K. Rowling                       | Bloomsbury                | English  |       55 | Illustrated Edition      | 799.00 | Fantasy       |          1 |                1997 |   4.90 | 10+       |
+|  7 | The Catcher in the Rye                | J.D. Salinger                      | Little, Brown and Company | English  |       20 | Original Edition         | 450.00 | Fiction       |          1 |                1951 |   4.30 | 14+       |
+|  8 | The Hobbit                            | J.R.R. Tolkien                     | HarperCollins             | English  |       45 | 75th Anniversary Edition | 599.00 | Fantasy       |          1 |                1937 |   4.80 | 12+       |
+|  9 | Sapiens: A Brief History of Humankind | Yuval Noah Harari                  | Harper                    | English  |       15 | Updated Edition          | 699.00 | Non-fiction   |          1 |                2011 |   4.70 | 18+       |
+| 10 | Atomic Habits                         | James Clear                        | Penguin                   | English  |       50 | Hardcover
+   | 499.00 | Self-help     |          1 |                2018 |   4.80 | 18+       |
+| 11 | The Silent Patient                    | Alex Michaelides                   | Celadon Books             | English  |       30 | Paperback
+   | 399.00 | Mystery       |          1 |                2019 |   4.60 | 16+       |
+| 12 | Becoming                              | Michelle Obama                     | Crown                     | English  |       20 | Special Edition          | 799.00 | Autobiography |          1 |                2018 |   4.90 | 16+       |
+| 13 | The Subtle Art of Not Giving a F*ck   | Mark Manson                        | HarperOne                 | English  |       40 | Paperback
+   | 399.00 | Self-help     |          1 |                2016 |   4.50 | 18+       |
+| 14 | Educated                              | Tara Westover                      | Random House              | English  |       25 | Paperback
+   | 549.00 | Memoir        |          1 |                2018 |   4.80 | 16+       |
+| 15 | The Power of Habit                    | Charles Duhigg                     | Random House              | English  |       30 | Paperback
+   | 479.00 | Self-help     |          1 |                2012 |   4.70 | 18+       |
+| 16 | Ikigai                                | Héctor García, Francesc Miralles   | Penguin                   | English  |       35 | Hardcover
+   | 399.00 | Self-help     |          1 |                2017 |   4.60 | 18+       |
+| 17 | Thinking, Fast and Slow               | Daniel Kahneman                    | Farrar, Straus and Giroux | English  |       20 | Paperback
+   | 599.00 | Psychology    |          1 |                2011 |   4.70 | 18+       |
+| 18 | Rich Dad Poor Dad                     | Robert Kiyosaki                    | Plata Publishing          | English  |       50 | Paperback
+   | 499.00 | Finance       |          1 |                1997 |   4.60 | 16+       |
+| 19 | The Lean Startup                      | Eric Ries                          | Crown                     | English  |       15 | Hardcover
+   | 799.00 | Business      |          1 |                2011 |   4.70 | 18+       |
+| 20 | Good to Great                         | Jim Collins                        | Harper Business           | English  |       25 | Paperback
+   | 599.00 | Business      |          1 |                2001 |   4.80 | 18+       |

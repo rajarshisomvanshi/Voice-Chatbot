@@ -1,0 +1,63 @@
+DATABASE: 
+
+columns = [
+    "book_id", "title", "author", "edition", "price", "language", "genre",
+    "bestseller", "pages", "year_of_publication", "rating", "age_grp","quantity"
+]
+
+# ✅ Book Data (From Your Given Dataset)
+books_data = [
+    (1, 'Don Quixote', 'Miguel de Cervantes', '1st', 499.99, 'English', 'Classic', 1, 992, 1605, 4.9, '16+',10),
+    (2, 'Alice\'s Adventures in Wonderland', 'Lewis Carroll', '1st', 299.99, 'English', 'Fantasy', 1, 96, 1865, 4.8, '10+',2),
+    (3, 'The Adventures of Huckleberry Finn', 'Mark Twain', '1st', 399.99, 'English', 'Adventure', 1, 366, 1884, 4.7, '12+',3),
+    (4, 'The Adventures of Tom Sawyer', 'Mark Twain', '1st', 349.99, 'English', 'Adventure', 1, 274, 1876, 4.6, '12+',4),
+    (5, 'Pride and Prejudice', 'Jane Austen', '1st', 349.99, 'English', 'Romance', 1, 279, 1813, 4.6, '14+',32),
+    (6, 'Wuthering Heights', 'Emily Brontë', '1st', 399.99, 'English', 'Romance', 1, 416, 1847, 4.5, '16+',2),
+    (7, 'Jane Eyre', 'Charlotte Brontë', '1st', 399.99, 'English', 'Romance', 1, 500, 1847, 4.7, '16+',15),
+    (8, 'Moby Dick', 'Herman Melville', '1st', 499.99, 'English', 'Adventure', 0, 635, 1851, 4.2, '16+',19),
+    (9, 'The Scarlet Letter', 'Nathaniel Hawthorne', '1st', 299.99, 'English', 'Classic', 1, 272, 1850, 4.4, '14+',21),
+    (10, 'Gulliver\'s Travels', 'Jonathan Swift', '1st', 349.99, 'English', 'Adventure', 1, 306, 1726, 4.3, '12+',33),
+    (11, 'A Christmas Carol', 'Charles Dickens', '1st', 249.99, 'English', 'Classic', 1, 104, 1843, 4.8, '10+',60),
+    (12, 'David Copperfield', 'Charles Dickens', '1st', 499.99, 'English', 'Classic', 1, 882, 1850, 4.6, '14+',100),
+    (13, 'A Tale of Two Cities', 'Charles Dickens', '1st', 399.99, 'English', 'Historical Fiction', 1, 489, 1859, 4.7, '14+',32),
+    (14, 'Little Women', 'Louisa May Alcott', '1st', 349.99, 'English', 'Classic', 1, 759, 1868, 4.8, '12+',21),
+    (15, 'Great Expectations', 'Charles Dickens', '1st', 399.99, 'English', 'Classic', 1, 505, 1861, 4.6, '14+',12),
+    (16, 'The Hobbit', 'J.R.R. Tolkien', '1st', 399.99, 'English', 'Fantasy', 1, 310, 1937, 4.8, '12+',10),
+    (17, 'Frankenstein', 'Mary Shelley', '1st', 299.99, 'English', 'Horror', 1, 280, 1818, 4.5, '16+',15),
+    (18, 'Oliver Twist', 'Charles Dickens', '1st', 399.99, 'English', 'Classic', 1, 554, 1837, 4.4, '12+',5),
+    (19, 'Crime and Punishment', 'Fyodor Dostoevsky', '1st', 449.99, 'English', 'Philosophical Fiction', 0, 671, 1866, 4.7, '18+',5),
+    (20, 'Dracula', 'Bram Stoker', '1st', 349.99, 'English', 'Horror', 1, 418, 1897, 4.6, '16+',10),
+    (21, 'Harry Potter and the Philosopher\'s Stone', 'J.K. Rowling', '1st', 299.99, 'English', 'Fantasy', 1, 223, 1997, 4.7, '9+',17),
+    (22, 'The Lord of the Rings', 'J.R.R. Tolkien', '1st', 599.99, 'English', 'Fantasy', 1, 1178, 1954, 4.9, '14+',18),
+    (23, 'The Da Vinci Code', 'Dan Brown', '1st', 349.99, 'English', 'Mystery Thriller', 1, 454, 2003, 4.1, '16+',45),
+    (24, 'The Alchemist', 'Paulo Coelho', '1st', 249.99, 'English', 'Philosophical', 1, 208, 1988, 4.3, '13+',26),
+    (25, 'The Hunger Games', 'Suzanne Collins', '1st', 349.99, 'English', 'Young Adult Dystopian', 1, 374, 2008, 4.3, '12+',76),
+    (26, 'Don Quixote', 'Miguel de Cervantes', '1st', 499.99, 'English', 'Classic', 1, 992, 1605, 4.9, '16+',89),
+    (27, "Alice's Adventures in Wonderland", 'Lewis Carroll', '1st', 299.99, 'English', 'Fantasy', 1, 96, 1865, 4.8, '10+',34),
+    (28, 'The Adventures of Huckleberry Finn', 'Mark Twain', '1st', 399.99, 'English', 'Adventure', 1, 366, 1884, 4.7, '12+',88),
+    (29, 'The Adventures of Tom Sawyer', 'Mark Twain', '1st', 349.99, 'English', 'Adventure', 1, 274, 1876, 4.6, '12+',90),
+    (30, 'Pride and Prejudice', 'Jane Austen', '1st', 349.99, 'English', 'Romance', 1, 279, 1813, 4.6, '14+',12),
+    (31, 'Wuthering Heights', 'Emily Brontë', '1st', 399.99, 'English', 'Romance', 1, 416, 1847, 4.5, '16+',5),
+    (32, 'Jane Eyre', 'Charlotte Brontë', '1st', 399.99, 'English', 'Romance', 1, 500, 1847, 4.7, '16+',10),
+    (33, 'Moby Dick', 'Herman Melville', '1st', 499.99, 'English', 'Adventure', 0, 635, 1851, 4.2, '16+',15),
+    (34, 'The Scarlet Letter', 'Nathaniel Hawthorne', '1st', 299.99, 'English', 'Classic', 1, 272, 1850, 4.4, '14+',20),
+    (35, 'Gulliver\'s Travels', 'Jonathan Swift', '1st', 349.99, 'English', 'Adventure', 1, 306, 1726, 4.3, '12+',25),
+    (36, 'A Christmas Carol', 'Charles Dickens', '1st', 249.99, 'English', 'Classic', 1, 104, 1843, 4.8, '10+',30),
+    (37, 'David Copperfield', 'Charles Dickens', '1st', 499.99, 'English', 'Classic', 1, 882, 1850, 4.6, '14+',35),
+    (38, 'A Tale of Two Cities', 'Charles Dickens', '1st', 399.99, 'English', 'Historical Fiction', 1, 489, 1859, 4.7, '14+',40),
+    (39, 'Little Women', 'Louisa May Alcott', '1st', 349.99, 'English', 'Classic', 1, 759, 1868, 4.8, '12+',42),
+    (40, 'Great Expectations', 'Charles Dickens', '1st', 399.99, 'English', 'Classic', 1, 505, 1861, 4.6, '14+',24),
+    (41, 'The Hobbit', 'J.R.R. Tolkien', '1st', 399.99, 'English', 'Fantasy', 1, 310, 1937, 4.8, '12+',5),
+    (42, 'Frankenstein', 'Mary Shelley', '1st', 299.99, 'English', 'Horror', 1, 280, 1818, 4.5, '16+',10),
+    (43, 'Oliver Twist', 'Charles Dickens', '1st', 399.99, 'English', 'Classic', 1, 554, 1837, 4.4, '12+',2),
+    (44, 'Crime and Punishment', 'Fyodor Dostoevsky', '1st', 449.99, 'English', 'Philosophical Fiction', 0, 671, 1866, 4.7, '18+',1),
+    (45, 'Dracula', 'Bram Stoker', '1st', 349.99, 'English', 'Horror', 1, 418, 1897, 4.6, '16+',15),
+    (46, 'Harry Potter and the Chamber of Secrets', 'J.K. Rowling', '1st', 299.99, 'English', 'Fantasy', 1, 251, 1998, 4.8, '9+',25),
+    (47, 'Harry Potter and the Prisoner of Azkaban', 'J.K. Rowling', '1st', 349.99, 'English', 'Fantasy', 1, 317, 1999, 4.9, '9+',35),
+    (48, 'A Game of Thrones', 'George R.R. Martin', '1st', 499.99, 'English', 'Fantasy', 1, 694, 1996, 4.8, '18+',23),
+    (49, 'A Clash of Kings', 'George R.R. Martin', '1st', 599.99, 'English', 'Fantasy', 1, 768, 1998, 4.7, '18+',3),
+    (50, 'A Storm of Swords', 'George R.R. Martin', '1st', 699.99, 'English', 'Fantasy', 1, 973, 2000, 4.9, '18+',2),
+]
+
+# ✅ Convert Data into a Pandas DataFrame
+book_table = pd.DataFrame(books_data, columns=columns)
