@@ -9,7 +9,7 @@ import os
 DB_CONFIG = {
     "host": "localhost",
     "user": "root",
-    "password": "@Rajarshi123",
+    "password": "aditya",
     "database": "books_db"
 }
 
@@ -218,24 +218,45 @@ class ChatbotApp:
         mobile_entry = tk.Entry(order_window, font=("Arial", 12))
         mobile_entry.pack(pady=5)
 
+        def fill_quantity():
+            response = self.listen()
+            if response:
+                quantity_entry.delete(0, tk.END)
+                quantity_entry.insert(0, response)
+
+        def fill_mobile():
+            response = self.listen()
+            if response:
+                mobile_entry.delete(0, tk.END)
+                mobile_entry.insert(0, response)
+
+        voice_quantity_btn = tk.Button(order_window, text="🎤 Speak Quantity", command=fill_quantity, bg="#ff4a4a", fg="white", font=("Arial", 10), padx=5, pady=2)
+        voice_quantity_btn.pack(pady=3)
+
+        voice_mobile_btn = tk.Button(order_window, text="🎤 Speak Mobile Number", command=fill_mobile, bg="#ff4a4a", fg="white", font=("Arial", 10), padx=5, pady=2)
+        voice_mobile_btn.pack(pady=3)
+
         def place_order():
-            quantity = int(quantity_entry.get())
-            mobile = mobile_entry.get().strip()
-            if quantity <= available_stock:
-                total_price = quantity * book_price
-                self.insert_order(mobile, book_title, book_author, quantity, total_price)
-                messagebox.showinfo("Order Confirmation", "Your order has been placed successfully!")
-                order_window.destroy()
-            else:
-                messagebox.showerror("Error", "Not enough stock available.")
+            try:
+                quantity = int(quantity_entry.get())
+                mobile = mobile_entry.get().strip()
+                if quantity <= available_stock:
+                    total_price = quantity * book_price
+                    self.insert_order(mobile, book_title, book_author, quantity, total_price)
+                    messagebox.showinfo("Order Confirmation", "Your order has been placed successfully!")
+                    order_window.destroy()
+                else:
+                    messagebox.showerror("Error", "Not enough stock available.")
+            except ValueError:
+                messagebox.showerror("Error", "Please enter a valid quantity.")
 
         confirm_btn = tk.Button(order_window, text="Confirm Order", command=place_order, bg="#4a4a4a", fg="white", font=("Arial", 12))
-        confirm_btn.pack(pady=20)
+        confirm_btn.pack(pady=3)
 
     def insert_order(self, mobile, title, author, quantity, total_price):
         conn = mysql.connector.connect(**DB_CONFIG)
         cursor = conn.cursor()
-        cursor.execute("INSERT INTO orders (user_mobile,book_title, author, quantity, total_price) VALUES (%s, %s, %s, %s, %s)",
+        cursor.execute("INSERT INTO orders (mobile_number,book_title, author, quantity, total_price) VALUES (%s, %s, %s, %s, %s)",
                        (mobile, title, author, quantity, total_price))
         cursor.execute("Update stock set quantity = quantity - %s where title = %s",
                        (quantity, title))
